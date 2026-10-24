@@ -2,9 +2,15 @@ import type { Metadata, Viewport } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Nibru.Eval — AI Code Evaluation & Algorithmic Rigor',
-  description: 'Software Engineer and AI Code Evaluator specializing in SFT, RLHF, code auditing, and sandboxed verification.',
-  generator: 'v0.app',
+  metadataBase: new URL('https://nibruad16.github.io'),
+  title: 'Nibru Kefyalew Tessema — Software Engineer, AI & GTM Systems',
+  description: 'Software engineer building LLM-powered products, the evaluations that keep them honest, and the automation that takes them to market.',
+  openGraph: {
+    title: 'Nibru Kefyalew Tessema — Software Engineer',
+    description: 'I build AI systems that help companies grow.',
+    url: '/',
+    type: 'website',
+  },
   icons: {
     icon: [
       {
