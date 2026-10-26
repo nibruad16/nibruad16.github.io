@@ -21,8 +21,8 @@ Open http://localhost:3000.
 ## Structure
 
 - `app/page.tsx` — all page sections (server component)
-- `components/cursor-signal.tsx`, `components/global-contact-map.tsx` — client-only pieces
-- `app/globals.css` — theme tokens and custom animations
+- `components/global-contact-map.tsx` — client-only world map
+- `app/globals.css` — retro design tokens (windows, bevels, keys) and breakpoints
 - `public/` — icons and the downloadable resume (`resume.pdf`)
 
 ## Build

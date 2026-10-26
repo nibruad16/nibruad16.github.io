@@ -1,5 +1,10 @@
 import type { Metadata, Viewport } from 'next'
+import { Host_Grotesk, IBM_Plex_Mono, IBM_Plex_Sans } from 'next/font/google'
 import './globals.css'
+
+const display = Host_Grotesk({ subsets: ['latin'], weight: ['700', '800'], variable: '--font-retro-display', display: 'swap' })
+const interfaceFont = IBM_Plex_Sans({ subsets: ['latin'], weight: ['400', '500', '700'], variable: '--font-retro-interface', display: 'swap' })
+const mono = IBM_Plex_Mono({ subsets: ['latin'], weight: ['400', '500'], variable: '--font-retro-mono', display: 'swap' })
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://nibruad16.github.io'),
@@ -31,11 +36,8 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  colorScheme: 'light dark',
-  themeColor: [
-    { media: '(prefers-color-scheme: light)', color: 'white' },
-    { media: '(prefers-color-scheme: dark)', color: 'black' },
-  ],
+  colorScheme: 'light',
+  themeColor: '#008080',
 }
 
 export default function RootLayout({
@@ -44,7 +46,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${display.variable} ${interfaceFont.variable} ${mono.variable}`}>
       <body className="antialiased">
         {children}
       </body>
